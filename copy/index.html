@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <!-- AUTHOR -->
+        <h1 class="author">The Machine</h1>
+
+        <!-- CALCULADORA -->
+        <main id="calculadora">
+
+            <!-- MENU-CALC -->
+            <div id="menu">
+                <div class="menu-list">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                
+                <h2>Padrão</h2>
+            </div>
+
+            <!-- DISPLAY-RESULT -->
+            <input id="resultado"></input>
+
+            <!-- DIGITOS -->
+             <table>
+                <thead>
+                    <tr>
+                        <td><button id="btn-delete" onclick="deleteAC()">AC</button></td>
+                        <td><button class="btn" onclick="inverso()">+/-</button></td>
+                        <td><button class="btn" onclick="insert('/')">/</button></td>
+                        <td><button id="back-btn" onclick ="backSpace()"><img src="assests/" alt=""></button></td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><button class="btn" onclick="insert('7')">7</button></td>
+                        <td><button class="btn" onclick="insert('8')">8</button></td>
+                        <td><button class="btn" onclick="insert('9')">9</button></td>
+                        <td><button class="btn" onclick="insert('x')">x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn" onclick="insert('4')">4</button></td>
+                        <td><button class="btn" onclick="insert('5')">5</button></td>
+                        <td><button class="btn" onclick="insert('6')">6</button></td>
+                        <td><button class="btn" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn" onclick="insert('1')">1</button></td>
+                        <td><button class="btn" onclick="insert('2')">2</button></td>
+                        <td><button class="btn" onclick="insert('3')">3</button></td>
+                        <td><button class="btn" onclick="insert('+')">+</button></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <!-- EXPANSÃO 2 COLUNAS / EXTENSÃO -->
+                        <td colspan="2"><button class="btn" style="width: 106px;" onclick="insert('0')">0</button></td>
+                        <td><button class="btn" onclick="insert('.')">.</button></td>
+                        <td><button id="result-btn" onclick="calcular()">=</button></td>
+                    </tr>
+                </tfoot>
+             </table>
+
+        </main>
+    </div>
+    
+</body>
+        
+</html>
